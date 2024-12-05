@@ -26,11 +26,18 @@ class posts extends Model
             ];
     }
 
-    public static function getSingle($slug)
+    public static function getSingle($slug): array
     {
-        $post = static::getAll();
-        return Arr::first($post, function($post) use ($slug) {
-            return $post['slug'] == $slug;
-        });
+        // $post = static::getAll();
+        // return Arr::first($post, function($post) use ($slug) {
+        //     return $post['slug'] == $slug;
+        // });
+
+        $post = Arr::first(static::getAll(), fn ($post) => $post['slug'] == $slug);
+        if (! $post){
+            abort(404);
+        }
+
+        return $post;
     }
 }
