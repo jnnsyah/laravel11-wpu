@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
     <title>Home Page</title>
 </head>
 <body>
-
 <!--
   This example requires updating your template:
 
@@ -140,7 +141,6 @@
     </div>
   </main>
 </div>
-
 
 </body>
 </html>
