@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('slug');
             $table->string('title');
             $table->string('author');
-            $table->string('Date');
+            $table->string('Date')->nullable();
             $table->text('body');
+            $table->timestamps();
         });
     }
 
