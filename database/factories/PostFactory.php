@@ -3,6 +3,7 @@
 namespace Database\Factories;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Post>
@@ -19,7 +20,7 @@ class PostFactory extends Factory
         return [
             'title' => fake()->sentence(6), //tambah param false = harus 6 kata yang digenerate
             'slug' => Str::slug(fake()->sentence(6)),
-            'author' => fake()->name(),
+            'author_id' => User::factory(),
             'body' => fake()->text()
         ];
     }
