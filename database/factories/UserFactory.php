@@ -32,6 +32,9 @@ class UserFactory extends Factory
         ];
     }
 
+
+    //App\Models\User::factory(3)->create(); 
+
     /**
      * Indicate that the model's email address should be unverified.
      */
